@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+.game-container{
+    height: 100vh;
+    width: 100%;
+    background: url("img.jpg");
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container h1{
+    font-size: 4rem;
+    color: #46494C;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.game-container p{
+    font-size: 1.6rem;
+    color: #46494C;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.game-box{
+    width: 60vh;
+    height: 60vh;
+    padding: 3vh;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5vh;
+    justify-content: space-between;
+    backdrop-filter: blur(7px);
+}
+
+.click-box{
+    color: #FFE590;
+    font-size: 4rem;
+    width: 30%;
+    height: 30%;
+    background: rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 5px;
+    transition: box-shadow 300ms ease-in-out;
+}
+
+.click-box:hover{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#reset-btn{
+    padding: 15px 25px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #fdc200;
+    color: #005069;
+    margin-top: 25px;
+    transition: color 300ms ease-in-out;
+}
+
+#reset-btn:hover{
+    color: #3b8aa1;
+}
+
+#new-game{
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #fdc200;
+  color: #005069;
+  margin-top: 20px;
+  transition: color 300ms ease-in-out;
+}
+
+#new-game:hover{
+    color: #3b8aa1;
+}
+
+
+footer{
+  text-align: center;
+  color: #0E1A2A;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+
+@media screen and (max-width: 600px) {
+  .game-container{
+    background: url("m-img.jpg");
+    background-position: center center;
+    background-size: cover;
+  }
+  .game-container h1{
+    font-size: 3rem;
+  }
+  .game-container p{
+    font-size: 1.2rem;
+    width: 80%;
+  }
+  .game-box{
+    width: 90vw;
+    height: 90vw;
+    padding: 4vw;
+    border-radius: 15px;
+  }
+  .click-box{
+    font-size: 3rem;
+    color: #fff;
+  }
+  #reset-btn, #new-game{
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  z-index: 1; /* Sit on top */
+  position: fixed; /* Stay in place */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  animation-name: animatetop;
+  animation-duration: 600ms;
+  animation-timing-function: ease-in-out;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {width: 0;height: 0;opacity: 0;}
+  to {width: 100%;height: 100%;opacity: 1}
+}
+
+
+/* Modal Content */
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  margin: auto;
+  padding: 20px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  max-width: 500px;
+  min-width: 300px;
+  position: absolute; /* Stay in place */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* The Close Button */
+.close {
+  color: #fff;
+  font-size: 35px;
+  position: absolute;
+  top: 1%;
+  right: 5%;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
