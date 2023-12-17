@@ -121,13 +121,20 @@ footer{
     height: 90vw;
     padding: 4vw;
     border-radius: 15px;
+    backdrop-filter: none;
+    border: none;
   }
   .click-box{
     font-size: 3rem;
     color: #fff;
+    background: rgba(0, 0, 0, 0.5);
   }
   #reset-btn, #new-game{
     font-size: 1.2rem;
+  }
+  footer{
+    color: #fff;
+    font-weight: 500;
   }
 }
 
