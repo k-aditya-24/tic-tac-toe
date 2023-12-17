@@ -126,6 +126,8 @@ footer{
   }
   .click-box{
     font-size: 3rem;
+    width: 29%;
+    height: 29%;
     color: #fff;
     background: rgba(0, 0, 0, 0.5);
   }
